@@ -109,7 +109,7 @@ export default function HomePage() {
             <p style={{ fontFamily:"'Jost',sans-serif", fontSize:11, letterSpacing:'.4em', textTransform:'uppercase', color:'#C9933A', marginBottom:18 }}>
               Luxury Vacation Rental · Jamaica
             </p>
-            <h1 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(48px,7vw,90px)', fontWeight:300, color:'#FFFFFF', lineHeight:1.05, marginBottom:22, textShadow:'0 2px 30px rgba(0,0,0,.3)' }}>
+            <h1 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(52px,7vw,96px)', fontWeight:600, color:'#FFFFFF', lineHeight:1.08, marginBottom:22, textShadow:'0 2px 12px rgba(0,0,0,.7), 0 4px 40px rgba(0,0,0,.5)' }}>
               Where Every Sunset<br /><em style={{ color:'#E8B96A', fontStyle:'italic' }}>Tells a Story</em>
             </h1>
             <p style={{ fontSize:17, color:'rgba(255,255,255,.75)', maxWidth:460, marginBottom:40, lineHeight:1.85, fontWeight:300 }}>

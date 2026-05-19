@@ -124,6 +124,42 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── MANAGED BY ── */}
+      <section style={{ background:'#FAF7F2', padding:'72px 0', borderTop:'1px solid #E8DDD0' }}>
+        <div className="container">
+          <div style={{ display:'flex', alignItems:'center', justifyContent:'center', marginBottom:40, gap:16 }}>
+            <div style={{ flex:1, height:1, background:'#E0D5C8' }}/>
+            <p style={{ fontFamily:"'Jost',sans-serif", fontSize:10, letterSpacing:'.25em', textTransform:'uppercase', color:'#C9933A', whiteSpace:'nowrap' }}>Professionally Managed By</p>
+            <div style={{ flex:1, height:1, background:'#E0D5C8' }}/>
+          </div>
+          <div style={{ background:'#FFFFFF', border:'1px solid #E0D5C8', padding:'40px 40px', display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))', gap:48, alignItems:'center' }}>
+            <div>
+              <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:28, color:'#1A2744', fontWeight:500, marginBottom:4 }}>Head Property Management</div>
+              <div style={{ fontSize:11, letterSpacing:'.15em', color:'#C9933A', textTransform:'uppercase', marginBottom:16 }}>Airbnb &amp; Rental Management Experts</div>
+              <p style={{ fontSize:14, color:'#666', lineHeight:1.85, marginBottom:20 }}>Sunset Retreat JA is professionally managed by Head Property Management — specialists in Airbnb and short-term rental management serving Niagara Falls and beyond.</p>
+              <p style={{ fontSize:13, fontStyle:'italic', color:'#888', lineHeight:1.7 }}>"We help owners maximize income while we handle the day-to-day."</p>
+            </div>
+            <div>
+              <div style={{ marginBottom:20 }}>
+                {['Airbnb Listing Management','Guest Communication','Cleanings &amp; Turnovers','Monthly Rentals','Lawn Care &amp; Snow Removal','5-Star Service Standard'].map(s => (
+                  <div key={s} style={{ display:'flex', alignItems:'center', gap:10, marginBottom:10 }}>
+                    <svg width="12" height="12" fill="none" stroke="#C9933A" strokeWidth="2.5" viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12"/></svg>
+                    <span style={{ fontSize:13, color:'#555' }}>{s}</span>
+                  </div>
+                ))}
+              </div>
+              <div style={{ display:'flex', alignItems:'center', gap:14, padding:'16px 20px', background:'#1A2744' }}>
+                <svg width="20" height="20" fill="none" stroke="#C9933A" strokeWidth="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div>
+                  <div style={{ fontSize:9, letterSpacing:'.2em', color:'#C9933A', textTransform:'uppercase', marginBottom:2 }}>Call or Text</div>
+                  <a href="tel:9053809787" style={{ fontSize:18, fontWeight:600, color:'#FFFFFF', fontFamily:"'Jost',sans-serif", letterSpacing:'.05em' }}>905-380-9787</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
       <style>{`@keyframes fadeUp{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}`}</style>
     </>
