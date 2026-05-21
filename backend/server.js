@@ -7,25 +7,8 @@ dotenv.config();
 
 const app = express();
 
-// Allow multiple origins: production frontend + local dev
-const allowedOrigins = [
-  'https://sunset.vercel.app',
-  'http://localhost:5173',
-  process.env.CLIENT_URL,
-].filter(Boolean);
-
-app.use(cors({
-  origin: function (origin, callback) {
-    // Allow requests with no origin (mobile apps, curl, Postman)
-    if (!origin) return callback(null, true);
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
-}));
+// Allow ALL origins — no CORS issues with any Vercel URL
+app.use(cors({ origin: true, credentials: true }));
 
 app.use(express.json());
 
