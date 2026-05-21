@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import BookingForm from '../components/BookingForm';
 import ScrollToTop from '../components/ScrollToTop';
 
-const HeroImg = 'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1800&q=80';
+const HeroImg = '/images/property-night.jpg';
 
 function CIcon({ name }) {
   const p = { width:20, height:20, fill:'none', stroke:'#C9933A', strokeWidth:'1.8', viewBox:'0 0 24 24' };
@@ -45,7 +45,7 @@ export default function ContactPage() {
               {[
                 { n:'phone', l:'Phone / WhatsApp', v:'+1 876 268 9319',          h:'tel:+18762689319' },
                 { n:'mail',  l:'Email',             v:'sunsetretreatja@gmail.com',h:'mailto:sunsetretreatja@gmail.com' },
-                { n:'map',   l:'Location',           v:'Jamaica, Caribbean',       h:null },
+                { n:'map',   l:'Location',           v:'119 Riviera Blvd, Ocho Rios, Jamaica',       h:null },
               ].map(item => (
                 <div key={item.l} style={{ display:'flex', gap:16, marginBottom:26 }}>
                   <div style={{ width:48,height:48,border:'1px solid rgba(201,147,58,.4)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}>
@@ -102,7 +102,7 @@ export default function ContactPage() {
         />
         <div style={{ position:'absolute', top:28, left:28, background:'#1A2744', padding:'16px 20px', borderLeft:'3px solid #C9933A', zIndex:2 }}>
           <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:18, color:'#FFFFFF' }}>Sunset Retreat JA</p>
-          <p style={{ fontSize:12, color:'rgba(255,255,255,.55)', marginTop:4 }}>Jamaica, Caribbean</p>
+          <p style={{ fontSize:12, color:'rgba(255,255,255,.55)', marginTop:4 }}>119 Riviera Blvd, Ocho Rios, Jamaica</p>
         </div>
       </section>
 

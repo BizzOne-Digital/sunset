@@ -6,11 +6,11 @@ import ScrollToTop from '../components/ScrollToTop';
 import api from '../api';
 
 const IMGS = {
-  hero:     'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1800&q=80',
-  villa:    'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&q=80',
+  hero:     '/images/property-gate.jpg',
+  villa:    '/images/property-exterior-day.jpg',
   pool:     'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=700&q=80',
   ocean:    'https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=700&q=80',
-  transfer: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=700&q=80',
+  transfer: '/images/property-building.jpg',
   chef:     'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700&q=80',
   cruise:   'https://images.unsplash.com/photo-1548574505-5e239809ee19?w=700&q=80',
 };

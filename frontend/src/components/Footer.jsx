@@ -34,7 +34,7 @@ export default function Footer() {
           <div>
             <h4 style={{ fontFamily: "'Jost', sans-serif", fontSize: 11, letterSpacing: '0.2em', textTransform: 'uppercase', color: '#C9933A', marginBottom: 20 }}>Contact</h4>
             <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.55)', lineHeight: 2 }}>
-              <p>Jamaica, Caribbean</p>
+              <p>Ocho Rios, Jamaica</p>
               <a href="tel:+18762689319" style={{ color: 'rgba(255,255,255,0.55)', display: 'block', transition: 'color 0.3s' }}
                 onMouseEnter={e => e.target.style.color = '#C9933A'}
                 onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.55)'}

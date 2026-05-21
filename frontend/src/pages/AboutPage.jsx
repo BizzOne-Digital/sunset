@@ -4,12 +4,12 @@ import Footer from '../components/Footer';
 import ScrollToTop from '../components/ScrollToTop';
 
 const IMGS = {
-  hero:    'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=1800&q=80',
-  story:   'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=900&q=80',
+  hero:    '/images/property-exterior2.jpg',
+  story:   '/images/property-building.jpg',
   villa:   'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=900&q=80',
-  pool:    'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80',
+  pool:    '/images/property-exterior-day.jpg',
   palm:    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400&q=80',
-  terrace: 'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=900&q=80',
+  terrace: '/images/property-night.jpg',
 };
 
 export default function AboutPage() {
@@ -90,10 +90,10 @@ export default function AboutPage() {
           </div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))', gap:2 }}>
             {[
-              { img: IMGS.villa,   t:'Authentic Luxury',  d:'Every corner of our villa is curated with premium furnishings and local artisan touches.' },
-              { img: IMGS.pool,    t:'Warm Hospitality',  d:"Our team is available around the clock to ensure your stay exceeds every expectation." },
-              { img: IMGS.terrace, t:'Prime Location',    d:'Positioned to give you the best of Jamaica — beaches, culture, and breathtaking views.' },
-              { img: IMGS.story,   t:'Total Privacy',     d:'Your exclusive retreat. No shared spaces, no interruptions — just you and paradise.' },
+              { img: '/images/property-gate.jpg',   t:'Authentic Luxury',  d:'Every corner of our villa is curated with premium furnishings and local artisan touches.' },
+              { img: '/images/property-exterior-day.jpg',    t:'Warm Hospitality',  d:"Our team is available around the clock to ensure your stay exceeds every expectation." },
+              { img: '/images/property-night.jpg', t:'Prime Location',    d:'Positioned to give you the best of Jamaica — beaches, culture, and breathtaking views.' },
+              { img: '/images/property-building.jpg',   t:'Total Privacy',     d:'Your exclusive retreat. No shared spaces, no interruptions — just you and paradise.' },
             ].map(v => (
               <div key={v.t} style={{ position:'relative', overflow:'hidden', height:340 }}
                 onMouseEnter={e=>{ e.currentTarget.querySelector('img').style.transform='scale(1.07)'; }}

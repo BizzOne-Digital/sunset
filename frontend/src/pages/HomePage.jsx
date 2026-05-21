@@ -5,49 +5,66 @@ import Footer from '../components/Footer';
 import BookingForm from '../components/BookingForm';
 import ScrollToTop from '../components/ScrollToTop';
 
+// Real property photos (from /public/images/) + quality Unsplash fills
 const IMGS = {
-  hero1:    'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1800&q=80',
-  hero2:    'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1800&q=80',
-  hero3:    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1800&q=80',
-  hero4:    'https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1800&q=80',
-  about:    'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=900&q=80',
-  pool:     'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80',
-  bedroom:  'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80',
-  dining:   'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=900&q=80',
-  terrace:  'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=900&q=80',
-  beach:    'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=900&q=80',
-  interior: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80',
-  living:   'https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=900&q=80',
-  garden:   'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=900&q=80',
-  couple:   'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=900&q=80',
-  sunset:   'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=80',
-  pool2:    'https://images.unsplash.com/photo-1444201983204-c43cbd584d93?w=900&q=80',
+  // Hero slideshow — best shots first
+  hero1:    '/images/property-gate.jpg',
+  hero2:    'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=1800&q=85',
+  hero3:    '/images/property-exterior-day.jpg',
+  hero4:    'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1800&q=85',
+
+  // About section
+  about:    '/images/property-building.jpg',
+  aboutAcc: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&q=80',
+
+  // Amenity cards — mix real + Unsplash
+  pool:     'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80',
+  bedroom:  'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80',
+  dining:   'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&q=80',
+  terrace:  '/images/property-night.jpg',
+
+  // Gallery grid — real property photos take centre stage
+  gal1:     '/images/property-gate.jpg',
+  gal2:     '/images/property-exterior-day.jpg',
+  gal3:     '/images/property-building.jpg',
+  gal4:     '/images/property-night.jpg',
+  gal5:     '/images/property-entrance.jpg',
+  gal6:     '/images/property-veranda.jpg',
+  gal7:     '/images/property-exterior2.jpg',
+
+  // Why-us collage
+  col1:     '/images/property-entrance2.jpg',
+  col2:     '/images/property-sitting.jpg',
+  col3:     '/images/property-corridor.jpg',
+
+  // Parallax quote section
+  sunset:   'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80',
 };
 
 const amenityCards = [
-  { img: IMGS.pool,    label: 'Private Pool',    desc: 'Infinity pool overlooking the Caribbean Sea' },
-  { img: IMGS.bedroom, label: 'Luxury Bedrooms', desc: 'Plush king beds & premium Egyptian cotton' },
-  { img: IMGS.dining,  label: 'Gourmet Kitchen', desc: 'Fully equipped for private chef experiences' },
-  { img: IMGS.terrace, label: 'Ocean Terrace',   desc: 'Private deck with panoramic sea views' },
+  { img: IMGS.pool,    label: 'Private Pool',     desc: 'Infinity pool for your exclusive use' },
+  { img: IMGS.bedroom, label: 'Luxury Bedrooms',  desc: 'Plush beds & premium Egyptian cotton' },
+  { img: IMGS.dining,  label: 'Gourmet Kitchen',  desc: 'Fully equipped for private chef experiences' },
+  { img: IMGS.terrace, label: 'Gated & Secure',   desc: 'Private gated compound, 24/7 security' },
 ];
 
 const gallery = [
-  { img: IMGS.hero1,   wide: true,  tall: false, cap: 'Villa at golden hour' },
-  { img: IMGS.beach,   wide: false, tall: true,  cap: 'Private beach access' },
-  { img: IMGS.interior,wide: false, tall: false, cap: 'Luxury interiors' },
-  { img: IMGS.living,  wide: false, tall: false, cap: 'Open-plan living' },
-  { img: IMGS.sunset,  wide: true,  tall: false, cap: 'Caribbean sunsets' },
-  { img: IMGS.garden,  wide: false, tall: false, cap: 'Tropical gardens' },
-  { img: IMGS.couple,  wide: false, tall: false, cap: 'Your perfect escape' },
+  { img: IMGS.gal1, wide: true,  tall: false, cap: 'Gated entrance' },
+  { img: IMGS.gal2, wide: false, tall: true,  cap: 'Property exterior' },
+  { img: IMGS.gal3, wide: false, tall: false, cap: 'The villa' },
+  { img: IMGS.gal4, wide: false, tall: false, cap: 'Evening ambiance' },
+  { img: IMGS.gal5, wide: true,  tall: false, cap: 'Welcome entrance' },
+  { img: IMGS.gal6, wide: false, tall: false, cap: 'Verandah seating' },
+  { img: IMGS.gal7, wide: false, tall: false, cap: 'Exterior view' },
 ];
 
 const testimonials = [
-  { av: 'EJ', name: 'Emily & James T.', origin: 'New York, USA',
-    text: 'Absolutely breathtaking. Woke up every morning to that golden Jamaican sunrise. Sunset Retreat is exactly what a luxury escape should feel like — pure paradise.' },
-  { av: 'SL', name: 'Sophie Laurent',   origin: 'Paris, France',
-    text: 'The villa exceeded every expectation. The pool at sunset, the sound of the ocean… we did not want to leave. Already planning our return to Jamaica!' },
-  { av: 'MK', name: 'Marcus & Kezia B.',origin: 'London, UK',
-    text: 'From arrival to departure we were treated like royalty. The attention to detail is extraordinary. Jamaica through the lens of Sunset Retreat is unforgettable.' },
+  { av:'EJ', name:'Emily & James T.', origin:'New York, USA',
+    text:'Absolutely breathtaking. Woke up every morning to that golden Jamaican sunrise. Sunset Retreat is exactly what a luxury escape should feel like — pure paradise.' },
+  { av:'SL', name:'Sophie Laurent',   origin:'Paris, France',
+    text:'The villa exceeded every expectation. The atmosphere, the comfort, the location — we did not want to leave. Already planning our return to Jamaica!' },
+  { av:'MK', name:'Marcus & Kezia B.',origin:'London, UK',
+    text:'From arrival to departure we were treated like royalty. The attention to detail is extraordinary. Jamaica through Sunset Retreat is unforgettable.' },
 ];
 
 function useReveal() {
@@ -91,7 +108,7 @@ export default function HomePage() {
       <Navbar />
       <ScrollToTop />
 
-      {/* ── HERO with slideshow ── */}
+      {/* ── HERO ── */}
       <section style={{ position:'relative', height:'100vh', minHeight:680, overflow:'hidden' }}>
         {heroImgs.map((src, i) => (
           <div key={i} style={{
@@ -102,20 +119,20 @@ export default function HomePage() {
             transition:'opacity 1.6s ease',
           }}/>
         ))}
-        <div style={{ position:'absolute', inset:0, background:'linear-gradient(to bottom, rgba(10,18,35,.55) 0%, rgba(10,18,35,.25) 45%, rgba(10,18,35,.75) 100%)', zIndex:1 }}/>
+        <div style={{ position:'absolute', inset:0, background:'linear-gradient(to bottom,rgba(10,18,35,.6) 0%,rgba(10,18,35,.25) 45%,rgba(10,18,35,.78) 100%)', zIndex:1 }}/>
 
         <div className="container" style={{ position:'relative', zIndex:2, height:'100%', display:'flex', alignItems:'center' }}>
-          <div style={{ maxWidth:680, animation:'fadeUp 1s ease .25s both' }}>
+          <div style={{ maxWidth:700, animation:'fadeUp 1s ease .25s both' }}>
             <p style={{ fontFamily:"'Jost',sans-serif", fontSize:11, letterSpacing:'.4em', textTransform:'uppercase', color:'#C9933A', marginBottom:18 }}>
-              Luxury Vacation Rental · Jamaica
+              Luxury Vacation Rental · Ocho Rios, Jamaica
             </p>
-            <h1 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(52px,7vw,96px)', fontWeight:600, color:'#FFFFFF', lineHeight:1.08, marginBottom:22, textShadow:'0 2px 12px rgba(0,0,0,.7), 0 4px 40px rgba(0,0,0,.5)' }}>
+            <h1 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(52px,7vw,96px)', fontWeight:600, color:'#FFFFFF', lineHeight:1.08, marginBottom:22, textShadow:'0 2px 12px rgba(0,0,0,.7),0 4px 40px rgba(0,0,0,.5)' }}>
               Where Every Sunset<br /><em style={{ color:'#E8B96A', fontStyle:'italic' }}>Tells a Story</em>
             </h1>
-            <p style={{ fontSize:17, color:'rgba(255,255,255,.75)', maxWidth:460, marginBottom:40, lineHeight:1.85, fontWeight:300 }}>
-              Your private luxury villa awaits at the edge of paradise. Relax · Unwind · Escape.
+            <p style={{ fontSize:17, color:'rgba(255,255,255,.78)', maxWidth:480, marginBottom:40, lineHeight:1.85, fontWeight:300 }}>
+              119 Riviera Blvd, Ocho Rios, Jamaica — your private gated villa awaits.
             </p>
-            <div style={{ display:'flex', gap:14, flexWrap:'wrap' }}>
+            <div style={{ display:'flex', gap:14, flexWrap:'wrap', alignItems:'center' }}>
               <Link to="/contact" className="btn-primary" style={{ padding:'15px 38px', fontSize:12, letterSpacing:'.12em' }}>
                 Book Your Stay
                 <svg width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -123,6 +140,25 @@ export default function HomePage() {
               <Link to="/about" className="btn-outline" style={{ padding:'15px 38px', fontSize:12, letterSpacing:'.12em' }}>
                 Explore Villa
               </Link>
+              {/* Booking platform links */}
+              <div style={{ display:'flex', gap:10, marginLeft:4 }}>
+                <a href="https://www.airbnb.com/rooms/51519181" target="_blank" rel="noreferrer"
+                  style={{ display:'flex', alignItems:'center', gap:6, background:'rgba(255,255,255,.12)', border:'1px solid rgba(255,255,255,.3)', color:'#FFFFFF', padding:'10px 16px', fontSize:11, letterSpacing:'.08em', textDecoration:'none', backdropFilter:'blur(4px)', transition:'all .3s' }}
+                  onMouseEnter={e=>e.currentTarget.style.background='rgba(255,90,58,.85)'}
+                  onMouseLeave={e=>e.currentTarget.style.background='rgba(255,255,255,.12)'}
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg>
+                  Airbnb
+                </a>
+                <a href="https://www.vrbo.com/4984182" target="_blank" rel="noreferrer"
+                  style={{ display:'flex', alignItems:'center', gap:6, background:'rgba(255,255,255,.12)', border:'1px solid rgba(255,255,255,.3)', color:'#FFFFFF', padding:'10px 16px', fontSize:11, letterSpacing:'.08em', textDecoration:'none', backdropFilter:'blur(4px)', transition:'all .3s' }}
+                  onMouseEnter={e=>e.currentTarget.style.background='rgba(0,115,230,.85)'}
+                  onMouseLeave={e=>e.currentTarget.style.background='rgba(255,255,255,.12)'}
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                  VRBO
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -139,9 +175,9 @@ export default function HomePage() {
       <section style={{ background:'#1A2744', padding:'22px 0', borderBottom:'1px solid rgba(201,147,58,.15)' }}>
         <div className="container">
           <div style={{ display:'flex', justifyContent:'space-around', flexWrap:'wrap', gap:20 }}>
-            {[['100+','Happy Guests'],['5★','Average Rating'],['3','Bedrooms'],['24/7','Guest Support'],['1','Exclusive Villa']].map(([n,l]) => (
+            {[['100+','Happy Guests'],['5★','Average Rating'],['119','Riviera Blvd'],['24/7','Guest Support'],['Gated','Private Villa']].map(([n,l]) => (
               <div key={l} style={{ textAlign:'center' }}>
-                <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:30, color:'#C9933A', fontWeight:500, lineHeight:1 }}>{n}</div>
+                <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:28, color:'#C9933A', fontWeight:500, lineHeight:1 }}>{n}</div>
                 <div style={{ fontSize:10, letterSpacing:'.18em', color:'rgba(255,255,255,.4)', textTransform:'uppercase', marginTop:4 }}>{l}</div>
               </div>
             ))}
@@ -157,20 +193,33 @@ export default function HomePage() {
               <p className="section-label">Welcome to Paradise</p>
               <div className="gold-line left"/>
               <h2 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(34px,4vw,54px)', color:'#1A2744', fontWeight:400, lineHeight:1.15, margin:'18px 0 22px' }}>
-                A Private Sanctuary<br />in <em style={{ color:'#C9933A' }}>Jamaica</em>
+                A Private Sanctuary<br />in <em style={{ color:'#C9933A' }}>Ocho Rios, Jamaica</em>
               </h2>
               <p style={{ color:'#555', fontSize:16, lineHeight:1.95, marginBottom:18 }}>
-                Sunset Retreat JA is more than a vacation rental — it is an experience crafted for those who appreciate the finer things in life. Nestled in Jamaica's most breathtaking landscape, our villa blends world-class luxury with authentic Caribbean warmth.
+                Sunset Retreat JA is a beautifully gated private villa at 119 Riviera Blvd, Ocho Rios. Blending Caribbean warmth with world-class comfort, it is the ideal escape for couples, families, and groups.
               </p>
               <p style={{ color:'#555', fontSize:16, lineHeight:1.95, marginBottom:34 }}>
-                Whether you seek romance, family bonding, or a complete personal reset — this is your home away from home in paradise.
+                Minutes from world-famous attractions — Dunn's River Falls, Blue Hole, pristine beaches — yet completely private and serene once you step through our golden gates.
               </p>
               <div style={{ display:'flex', gap:24, marginBottom:34, flexWrap:'wrap' }}>
-                {[['Private Villa','Exclusively yours'],['Ocean Views','Every room'],['Full Amenities','Nothing missing']].map(([t,s]) => (
+                {[['Gated Villa','Exclusively yours'],['Ocho Rios','Prime location'],['Full Amenities','Nothing missing']].map(([t,s]) => (
                   <div key={t} style={{ borderLeft:'2px solid #C9933A', paddingLeft:12 }}>
                     <div style={{ fontSize:13, fontWeight:500, color:'#1A2744' }}>{t}</div>
                     <div style={{ fontSize:12, color:'#C9933A' }}>{s}</div>
                   </div>
+                ))}
+              </div>
+              {/* Platform links */}
+              <div style={{ display:'flex', gap:10, marginBottom:28, flexWrap:'wrap' }}>
+                {[
+                  { label:'Book on Airbnb',href:'https://www.airbnb.com/rooms/51519181',bg:'#FF5A3B' },
+                  { label:'Book on VRBO', href:'https://www.vrbo.com/4984182',           bg:'#0073E6' },
+                ].map(p => (
+                  <a key={p.label} href={p.href} target="_blank" rel="noreferrer"
+                    style={{ background:p.bg, color:'#FFFFFF', padding:'10px 20px', fontSize:11, letterSpacing:'.1em', textTransform:'uppercase', fontFamily:"'Jost',sans-serif", textDecoration:'none', display:'inline-flex', alignItems:'center', gap:6, transition:'opacity .3s' }}
+                    onMouseEnter={e=>e.currentTarget.style.opacity='.8'}
+                    onMouseLeave={e=>e.currentTarget.style.opacity='1'}
+                  >{p.label}</a>
                 ))}
               </div>
               <Link to="/about" className="btn-primary" style={{ background:'#1A2744', fontSize:12 }}>
@@ -181,8 +230,8 @@ export default function HomePage() {
 
             <div ref={setRef('abImg')} data-key="abImg" style={{ ...anim('abImg',.18), position:'relative' }}>
               <div style={{ paddingBottom:'115%', overflow:'hidden', position:'relative' }}>
-                <img src={IMGS.about} alt="Jamaica beach" loading="lazy"
-                  style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover' }}/>
+                <img src={IMGS.about} alt="Sunset Retreat JA property" loading="lazy"
+                  style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', objectPosition:'center top' }}/>
                 <div style={{ position:'absolute', inset:0, background:'linear-gradient(to top,rgba(26,39,68,.35) 0%,transparent 60%)' }}/>
               </div>
               <div style={{ position:'absolute', bottom:-20, left:-20, background:'#C9933A', padding:'18px 22px', zIndex:2 }}>
@@ -190,14 +239,14 @@ export default function HomePage() {
                 <div style={{ fontSize:10, color:'rgba(255,255,255,.85)', letterSpacing:'.15em', textTransform:'uppercase', marginTop:2 }}>Guest Rating</div>
               </div>
               <div style={{ position:'absolute', top:-20, right:-20, width:130, height:130, overflow:'hidden', border:'4px solid #FAF7F2', zIndex:2 }}>
-                <img src={IMGS.pool2} alt="Pool view" loading="lazy" style={{ width:'100%', height:'100%', objectFit:'cover' }}/>
+                <img src={IMGS.aboutAcc} alt="Room" loading="lazy" style={{ width:'100%', height:'100%', objectFit:'cover' }}/>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── AMENITY IMAGE CARDS ── */}
+      {/* ── AMENITY CARDS ── */}
       <section className="section-pad" style={{ background:'#FFFFFF' }}>
         <div className="container">
           <div ref={setRef('amen')} data-key="amen" style={{ ...anim('amen'), textAlign:'center', marginBottom:52 }}>
@@ -210,14 +259,14 @@ export default function HomePage() {
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))', gap:18 }}>
             {amenityCards.map((a,i) => (
               <div key={a.label} ref={setRef(`ac${i}`)} data-key={`ac${i}`}
-                style={{ ...anim(`ac${i}`, i*.1), position:'relative', overflow:'hidden', cursor:'default' }}
-                onMouseEnter={e => { e.currentTarget.querySelector('img').style.transform='scale(1.08)'; }}
-                onMouseLeave={e => { e.currentTarget.querySelector('img').style.transform='scale(1)'; }}
+                style={{ ...anim(`ac${i}`,i*.1), position:'relative', overflow:'hidden', cursor:'default' }}
+                onMouseEnter={e=>e.currentTarget.querySelector('img').style.transform='scale(1.08)'}
+                onMouseLeave={e=>e.currentTarget.querySelector('img').style.transform='scale(1)'}
               >
                 <div style={{ paddingBottom:'100%', position:'relative', overflow:'hidden' }}>
                   <img src={a.img} alt={a.label} loading="lazy"
                     style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover', transition:'transform .6s ease' }}/>
-                  <div style={{ position:'absolute', inset:0, background:'linear-gradient(to top,rgba(10,18,35,.82) 0%,rgba(10,18,35,.08) 55%)' }}/>
+                  <div style={{ position:'absolute', inset:0, background:'linear-gradient(to top,rgba(10,18,35,.85) 0%,rgba(10,18,35,.08) 55%)' }}/>
                   <div style={{ position:'absolute', bottom:0, left:0, right:0, padding:'22px 20px' }}>
                     <div style={{ width:26, height:2, background:'#C9933A', marginBottom:9 }}/>
                     <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:22, color:'#FFFFFF', fontWeight:400 }}>{a.label}</div>
@@ -230,7 +279,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FULL-WIDTH PARALLAX QUOTE ── */}
+      {/* ── PARALLAX QUOTE ── */}
       <section style={{ position:'relative', height:440, overflow:'hidden' }}>
         <img src={IMGS.sunset} alt="Jamaica sunset" loading="lazy"
           style={{ width:'100%', height:'115%', objectFit:'cover', objectPosition:'center 60%', marginTop:'-7.5%' }}/>
@@ -240,7 +289,7 @@ export default function HomePage() {
             "Every moment here becomes<br /><em style={{ color:'#E8B96A' }}>a memory for life"</em>
           </p>
           <div style={{ width:56, height:1, background:'#C9933A', margin:'22px auto' }}/>
-          <p style={{ fontSize:12, letterSpacing:'.28em', color:'rgba(255,255,255,.6)', textTransform:'uppercase' }}>Sunset Retreat JA · Jamaica</p>
+          <p style={{ fontSize:12, letterSpacing:'.28em', color:'rgba(255,255,255,.6)', textTransform:'uppercase' }}>119 Riviera Blvd · Ocho Rios · Jamaica</p>
         </div>
       </section>
 
@@ -291,15 +340,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── PHOTO GALLERY ── */}
+      {/* ── REAL PROPERTY GALLERY ── */}
       <section className="section-pad" style={{ background:'#1A2744' }}>
         <div className="container">
           <div ref={setRef('gal')} data-key="gal" style={{ ...anim('gal'), textAlign:'center', marginBottom:48 }}>
-            <p className="section-label" style={{ color:'#C9933A' }}>Gallery</p>
+            <p className="section-label" style={{ color:'#C9933A' }}>Photo Gallery</p>
             <div className="gold-line"/>
             <h2 style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(30px,4vw,48px)', color:'#FFFFFF', margin:'16px 0' }}>
               See Your <em>Paradise</em>
             </h2>
+            <p style={{ fontSize:14, color:'rgba(255,255,255,.45)', marginTop:8 }}>Real photos of Sunset Retreat JA · Ocho Rios, Jamaica</p>
           </div>
           <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gridAutoRows:'200px', gap:8 }}>
             {gallery.map((g,i) => (
@@ -308,37 +358,66 @@ export default function HomePage() {
                 onMouseEnter={e=>{ e.currentTarget.querySelector('img').style.transform='scale(1.08)'; e.currentTarget.querySelector('.cap').style.opacity='1'; }}
                 onMouseLeave={e=>{ e.currentTarget.querySelector('img').style.transform='scale(1)'; e.currentTarget.querySelector('.cap').style.opacity='0'; }}
               >
-                <img src={g.img} alt={g.cap} loading="lazy" style={{ width:'100%', height:'100%', objectFit:'cover', transition:'transform .6s ease' }}/>
+                <img src={g.img} alt={g.cap} loading="lazy" style={{ width:'100%', height:'100%', objectFit:'cover', objectPosition:'center', transition:'transform .6s ease' }}/>
                 <div className="cap" style={{ position:'absolute', inset:0, background:'rgba(10,18,35,.52)', display:'flex', alignItems:'flex-end', padding:16, opacity:0, transition:'opacity .35s' }}>
                   <span style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:16, color:'#FFFFFF', fontStyle:'italic' }}>{g.cap}</span>
                 </div>
               </div>
             ))}
           </div>
+
+          {/* Book on platforms CTA inside gallery section */}
+          <div style={{ marginTop:40, display:'flex', justifyContent:'center', gap:16, flexWrap:'wrap' }}>
+            <a href="https://www.airbnb.com/rooms/51519181" target="_blank" rel="noreferrer"
+              style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#FF5A3B', color:'#FFFFFF', padding:'14px 28px', fontFamily:"'Jost',sans-serif", fontSize:12, letterSpacing:'.12em', textTransform:'uppercase', textDecoration:'none', transition:'opacity .3s' }}
+              onMouseEnter={e=>e.currentTarget.style.opacity='.85'}
+              onMouseLeave={e=>e.currentTarget.style.opacity='1'}
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg>
+              Book on Airbnb
+            </a>
+            <a href="https://www.vrbo.com/4984182" target="_blank" rel="noreferrer"
+              style={{ display:'inline-flex', alignItems:'center', gap:8, background:'#0073E6', color:'#FFFFFF', padding:'14px 28px', fontFamily:"'Jost',sans-serif", fontSize:12, letterSpacing:'.12em', textTransform:'uppercase', textDecoration:'none', transition:'opacity .3s' }}
+              onMouseEnter={e=>e.currentTarget.style.opacity='.85'}
+              onMouseLeave={e=>e.currentTarget.style.opacity='1'}
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+              Book on VRBO
+            </a>
+            <a href="https://www.vrbo.com/5128961" target="_blank" rel="noreferrer"
+              style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(255,255,255,.08)', border:'1px solid rgba(255,255,255,.2)', color:'#FFFFFF', padding:'14px 28px', fontFamily:"'Jost',sans-serif", fontSize:12, letterSpacing:'.12em', textTransform:'uppercase', textDecoration:'none', transition:'all .3s' }}
+              onMouseEnter={e=>{ e.currentTarget.style.background='rgba(255,255,255,.15)'; }}
+              onMouseLeave={e=>{ e.currentTarget.style.background='rgba(255,255,255,.08)'; }}
+            >VRBO Listing 2</a>
+            <a href="https://www.vrbo.com/5128991" target="_blank" rel="noreferrer"
+              style={{ display:'inline-flex', alignItems:'center', gap:8, background:'rgba(255,255,255,.08)', border:'1px solid rgba(255,255,255,.2)', color:'#FFFFFF', padding:'14px 28px', fontFamily:"'Jost',sans-serif", fontSize:12, letterSpacing:'.12em', textTransform:'uppercase', textDecoration:'none', transition:'all .3s' }}
+              onMouseEnter={e=>{ e.currentTarget.style.background='rgba(255,255,255,.15)'; }}
+              onMouseLeave={e=>{ e.currentTarget.style.background='rgba(255,255,255,.08)'; }}
+            >VRBO Listing 3</a>
+          </div>
         </div>
       </section>
 
-      {/* ── WHY CHOOSE US (image + list) ── */}
+      {/* ── WHY CHOOSE US ── */}
       <section className="section-pad" style={{ background:'#FFFFFF' }}>
         <div className="container">
           <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))', gap:72, alignItems:'center' }}>
-            {/* Image collage */}
             <div ref={setRef('wi')} data-key="wi" style={{ ...anim('wi'), position:'relative' }}>
               <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:10 }}>
                 <div style={{ paddingBottom:'130%', position:'relative', overflow:'hidden' }}>
-                  <img src={IMGS.interior} alt="Villa interior" loading="lazy" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover' }}/>
+                  <img src={IMGS.col1} alt="Property entrance" loading="lazy" style={{ position:'absolute', inset:0, width:'100%', height:'100%', objectFit:'cover' }}/>
                 </div>
                 <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
                   <div style={{ flex:1, position:'relative', overflow:'hidden' }}>
-                    <img src={IMGS.living} alt="Living room" loading="lazy" style={{ width:'100%', height:'100%', objectFit:'cover', position:'absolute', inset:0 }}/>
+                    <img src={IMGS.col2} alt="Sitting area" loading="lazy" style={{ width:'100%', height:'100%', objectFit:'cover', position:'absolute', inset:0 }}/>
                   </div>
                   <div style={{ flex:1, position:'relative', overflow:'hidden' }}>
-                    <img src={IMGS.garden} alt="Garden" loading="lazy" style={{ width:'100%', height:'100%', objectFit:'cover', position:'absolute', inset:0 }}/>
+                    <img src={IMGS.col3} alt="Corridor" loading="lazy" style={{ width:'100%', height:'100%', objectFit:'cover', position:'absolute', inset:0 }}/>
                   </div>
                 </div>
               </div>
               <div style={{ position:'absolute', bottom:-16, right:-16, background:'#1A2744', padding:'20px 24px', zIndex:2 }}>
-                <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:12, color:'#C9933A', letterSpacing:'.15em', textTransform:'uppercase' }}>Est.</div>
+                <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:11, color:'#C9933A', letterSpacing:'.15em', textTransform:'uppercase' }}>Est.</div>
                 <div style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:28, color:'#FFFFFF', lineHeight:1 }}>2018</div>
               </div>
             </div>
@@ -350,9 +429,9 @@ export default function HomePage() {
                 Why Guests Choose<br /><em style={{ color:'#C9933A' }}>Sunset Retreat</em>
               </h2>
               {[
-                { t:'Authentic Luxury',   d:'Curated with premium furnishings and local Jamaican artisan touches throughout.' },
-                { t:'Total Privacy',      d:'The entire villa is exclusively yours — no shared spaces, no interruptions.' },
-                { t:'Prime Location',     d:'Positioned for the best of Jamaica — beaches, culture, and breathtaking views.' },
+                { t:'Authentic Luxury',   d:'Premium furnishings and warm Jamaican hospitality in every corner of the villa.' },
+                { t:'Total Privacy',      d:'Fully gated compound — the entire villa is exclusively yours, no sharing.' },
+                { t:'Prime Ocho Rios Location', d:'Minutes from Dunn\'s River Falls, Blue Hole, beaches, and top restaurants.' },
                 { t:'Warm Hospitality',   d:'Our team is available around the clock to ensure every expectation is exceeded.' },
               ].map(({ t, d }) => (
                 <div key={t} style={{ display:'flex', gap:16, marginBottom:22 }}>
@@ -419,10 +498,10 @@ export default function HomePage() {
                 Begin Your<br /><em style={{ color:'#E8B96A' }}>Journey</em>
               </h2>
               <p style={{ color:'rgba(255,255,255,.5)', fontSize:15, lineHeight:1.85, marginBottom:36 }}>
-                Fill out the form and we will get back to you within 24 hours with availability and details for your Jamaican getaway.
+                Fill out the form and we will get back to you within 24 hours. You can also book directly on Airbnb or VRBO.
               </p>
               <div style={{ display:'flex', flexDirection:'column', gap:18 }}>
-                {[{n:'phone',l:'Call / WhatsApp',v:'+1 876 268 9319',h:'tel:+18762689319'},{n:'mail',l:'Email',v:'sunsetretreatja@gmail.com',h:'mailto:sunsetretreatja@gmail.com'},{n:'map',l:'Location',v:'Jamaica, Caribbean',h:null}].map(({ n,l,v,h }) => (
+                {[{n:'phone',l:'Call / WhatsApp',v:'+1 876 268 9319',h:'tel:+18762689319'},{n:'mail',l:'Email',v:'sunsetretreatja@gmail.com',h:'mailto:sunsetretreatja@gmail.com'},{n:'map',l:'Address',v:'119 Riviera Blvd, Ocho Rios, Jamaica',h:null}].map(({ n,l,v,h }) => (
                   <div key={l} style={{ display:'flex', alignItems:'center', gap:14 }}>
                     <div style={{ width:44,height:44,border:'1px solid rgba(201,147,58,.3)',display:'flex',alignItems:'center',justifyContent:'center',flexShrink:0 }}>
                       <CIcon name={n}/>
@@ -435,6 +514,20 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
+              {/* Platform links in form section */}
+              <div style={{ marginTop:28, padding:'18px 20px', background:'rgba(255,255,255,.05)', border:'1px solid rgba(201,147,58,.2)' }}>
+                <p style={{ fontSize:10, letterSpacing:'.15em', color:'#C9933A', textTransform:'uppercase', marginBottom:12 }}>Book Directly Online</p>
+                <div style={{ display:'flex', gap:10, flexWrap:'wrap' }}>
+                  <a href="https://www.airbnb.com/rooms/51519181" target="_blank" rel="noreferrer"
+                    style={{ flex:1, minWidth:100, textAlign:'center', background:'#FF5A3B', color:'#FFFFFF', padding:'10px 12px', fontSize:11, textDecoration:'none', fontFamily:"'Jost',sans-serif", letterSpacing:'.08em', textTransform:'uppercase' }}>
+                    Airbnb
+                  </a>
+                  <a href="https://www.vrbo.com/4984182" target="_blank" rel="noreferrer"
+                    style={{ flex:1, minWidth:100, textAlign:'center', background:'#0073E6', color:'#FFFFFF', padding:'10px 12px', fontSize:11, textDecoration:'none', fontFamily:"'Jost',sans-serif", letterSpacing:'.08em', textTransform:'uppercase' }}>
+                    VRBO
+                  </a>
+                </div>
+              </div>
             </div>
             <div ref={setRef('bkf')} data-key="bkf" style={anim('bkf',.2)}>
               <BookingForm />
@@ -446,13 +539,13 @@ export default function HomePage() {
       {/* ── MAP ── */}
       <section style={{ height:420, position:'relative' }}>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d484772.35944!2d-77.5!3d18.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ed9612ecf2a7a01%3A0xd44ac90be5a9b5d3!2sJamaica!5e0!3m2!1sen!2s!4v1716000000000"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3788.5!2d-77.1051!3d18.4041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8edafdf5c8f6b4e7%3A0x1!2s119+Riviera+Blvd%2C+Ocho+Rios%2C+Jamaica!5e0!3m2!1sen!2s!4v1716000000000"
           style={{ width:'100%', height:'100%', border:0, filter:'grayscale(20%) contrast(1.05)' }}
-          allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Location"
+          allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="Sunset Retreat JA Location"
         />
         <div style={{ position:'absolute', top:28, left:28, background:'#1A2744', padding:'16px 20px', borderLeft:'3px solid #C9933A', zIndex:2 }}>
           <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:18, color:'#FFFFFF' }}>Sunset Retreat JA</p>
-          <p style={{ fontSize:12, color:'rgba(255,255,255,.55)', marginTop:4 }}>Jamaica, Caribbean</p>
+          <p style={{ fontSize:12, color:'rgba(255,255,255,.55)', marginTop:4 }}>119 Riviera Blvd, Ocho Rios, Jamaica</p>
         </div>
       </section>
 
